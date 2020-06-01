@@ -9,7 +9,12 @@ while True:
 while True:
 	try:
 		rol = input("Ingrese E si es estudiante o P si es profesor")
-		break
+		if (rol == "E"):
+			break
+		if (rol == "P"):
+			break
+		else: 
+			print("Ingrese nuevamente porfavor")
 	except ValueError:
 		print("Ingrese nuevamente porfavor")
 
