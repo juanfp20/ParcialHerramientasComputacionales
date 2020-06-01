@@ -1,0 +1,47 @@
+#Solucion del problema
+
+while True:
+	try:
+		cedula = int(input("Ingrese su Cedula"))
+		break
+	except ValueError:
+		print("Error, ingrese su Numero de Cedula Nuevamente")
+while True:
+	try:
+		rol = input("Ingrese E si es estudiante o P si es profesor")
+		break
+	except ValueError:
+		print("Ingrese nuevamente porfavor")
+
+while True:
+	try:
+		codigo = input("Ingrese el codigo del Producto")
+		break
+	except ValueError:
+		print("Ingrese el codigo nuevamente por favor")
+
+while True:
+	try:
+		precio = int(input("Ingrese el precio del producto"))
+		break
+	except ValueError:
+		print("Ingrese el precio nuevamente por favor")
+
+while True:
+	try:
+		cantidad = int(input("¿Cuantos desea llevar?"))
+		break
+	except ValueError:
+		print("Ingrese la cantidad nuevamente por favor")
+
+if (rol == "E"):
+	descuento = 0.4
+	preciotot = (precio * cantidad) * descuento
+	total = (((precio * cantidad)) - preciotot) 
+	print ("El estudiante con cedula", cedula," debe pagar", total ,"por el producto", codigo)
+
+if (rol == "P"):
+	descuento = 0.2
+	preciotot = (precio * cantidad) * descuento
+	total = (((precio * cantidad)) - preciotot) 
+	print ("El profesor con cedula", cedula," debe pagar", total ,"por el producto", codigo)
